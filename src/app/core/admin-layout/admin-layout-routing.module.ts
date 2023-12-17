@@ -27,6 +27,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./../../admin/modules/issues-name/issues-name.module').then(m => m.IssuesNameModule)
   },
+  {
+    path: 'workDays',
+    loadChildren: () =>
+      import('./../../admin/modules/work-days/work-days.module').then(m => m.WorkDaysModule)
+  },
 ];
 
 @NgModule({
