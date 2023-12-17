@@ -1,0 +1,56 @@
+<!-- Navbar -->
+<nav
+  class="md:flex-row md:flex-nowrap md:justify-start flex items-center p-4"
+>
+  <div
+    class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-2 px-2 bg-white rounded shadow"
+  >
+    <!-- Form -->
+    <form class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
+      <div class="relative flex w-full flex-wrap items-stretch">
+        <span
+          class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-5 py-3"
+          ><i class="fas fa-search"></i
+        ></span>
+        <input
+          type="text"
+          placeholder="ابحث"
+          class="border-0 px-5 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm outline-none w-full pl-10 mr-2"
+        />
+      </div>
+    </form>
+    <!-- User -->
+    
+
+
+    <a role="button" class="ml-2"><i class="fa-regular fa-bell fa-2xl"></i></a>
+        <div class="bg-transparent dropdown inline-block relative">
+          <img role="button" class="rounded-full h-11 w-11 m-2" src="../../../../../assets/images/1.png" alt="avatar">
+          <ul class="rounded-b rounded-t dropdown-menu absolute top-12 left-1 hidden text-gray-700 pt-1 bg-white" style="width: 180px;">
+            <li class="rounded-t hover:bg-gray-400 py-2 px-2 block whitespace-no-wrap flex items-center justify-start">
+              <div>
+                <a [routerLink]="['/dashboard/viewUserProfile']"><img role="button" class="rounded-full h-10 w-10 m-2" src="../../../../../assets/images/1.png" alt="avatar">
+                </a>
+              </div>
+              <div><h6 class="font-bold">Esraa</h6><span>مدير</span></div>
+            </li>
+            <div class="bg-gray-300 h-1"></div>
+            <li><a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" [routerLink]="['/dashboard/viewUserProfile']"><i class="feather ft-user"></i> حسابي </a>
+            </li>
+            <li><a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" [routerLink]="['/dashboard/editUserProfile']"><i class="feather ft-user"></i> الإعدادات </a>
+            </li>
+            <div class="bg-gray-300 h-1"></div>
+            <li><a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" [routerLink]="['/dashboard/editUserProfile']"><i class="feather ft-user"></i> المساعدة </a>
+            </li>
+            <li><a class="hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" [routerLink]="['/dashboard/editUserProfile']"><i class="feather ft-user"></i> التسعير </a>
+            </li>
+            <div class="bg-gray-300 h-1"></div>
+            <li>
+              <a class="rounded-b hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" [routerLink]="" (click)="logout()"><i class="feather ft-power"></i> الخروج</a>
+            </li>
+          </ul>
+        </div>
+      
+      </div>
+
+</nav>

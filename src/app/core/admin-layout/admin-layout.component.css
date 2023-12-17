@@ -1,0 +1,31 @@
+
+
+.content {
+  margin-right: 250px;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  transition: 0.5s;
+  
+}
+.main{
+  margin-bottom:var(--footerHeight);
+}
+@media (min-width: 992px) {
+
+  .content {
+      width: calc(100% - 250px);
+  }
+
+  .content.open {
+      width: 100%;
+      margin-right: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+
+  .content {
+      width: 100%;
+      margin-right: 0;
+  }
+}

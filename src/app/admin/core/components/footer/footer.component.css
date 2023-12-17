@@ -1,0 +1,31 @@
+a , .brandName {
+  color: #a56e07;
+  text-decoration: none;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 250px);
+    transition: 0.5s;
+    z-index: 1030;
+    margin-left: 250px;
+    /* height: var(--footerHeight); */
+}
+@media (min-width: 992px) {
+  .footer.open {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 0;
+  }
+}
+
+
+@media (max-width: 991.98px) {
+
+  .footer {
+      width: 100%;
+      margin-left: 0;
+  }
+}

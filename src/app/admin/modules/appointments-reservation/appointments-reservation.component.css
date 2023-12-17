@@ -1,0 +1,10 @@
+.bg-colored-brown{
+  background-color: var(--light-color);
+}
+.text-colored-darkbrown, .fa-pencil, .fa-ellipsis-v{
+  color: var(--main-color);
+}
+.btn-bg{
+  background-color: var(--main-color);
+  color: #fff;
+}

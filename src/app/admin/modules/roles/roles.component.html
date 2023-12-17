@@ -1,0 +1,160 @@
+<div class="container mx-auto px-4 sm:px-8">
+  <nav class="flex" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+      <li class="inline-flex items-center">
+        <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+          <i class="fa-regular fa-file mt-1 mx-2"></i>
+          الأدوار
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <div class="py-8">
+    <div class="grid grid-cols-6 md:grid-cols-6 lg:grid-cols-6 my-2">
+      <div>
+        <button (click)="toggleModal()" type="button" class="btn-bg border border-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm px-5 py-2.5">إضافة دور <i class="fa fa-plus mr-2"></i></button>
+      </div>
+      <div class="col-span-1">
+        <select id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="">10</option>
+        </select>
+      </div>
+      <div class="col-end-6">
+        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block py-2.5 px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="بحث">
+      </div>
+      <div>
+        <select id="" class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="">اختار الدور</option>
+        </select>
+      </div>
+    </div>
+    <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+      <div
+        class="inline-block min-w-full shadow-md rounded-lg overflow-hidden"
+      >
+        <table id="my-table" class="min-w-full leading-normal">
+          <thead>
+            <tr>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+              <input type="checkbox">
+              </th>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+              المستخدم
+              </th>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+                الدور
+              </th>
+              <th
+              class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+              الحالة
+            </th>
+            <th
+            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider"
+          >
+              Action
+            </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"><i class="fa fa-clock fa-lg" aria-hidden="true"></i> أسم الدور</span>
+                  
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">نشط</span>
+                </span>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-trash fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="pagination">
+          <ol id="numbers"></ol>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Main modal -->
+<div *ngIf="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+  <div class="relative p-4 w-50 h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  إضافة دور
+              </h3>
+              <button type="button" (click)="toggleModal()" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                  </svg>
+
+                 
+              </button>
+          </div>
+          <!-- Modal body -->
+          <form class="p-4 md:p-5">
+              <button (click)="toggleModal()" type="button" class="btn-bg border border-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm px-5 py-2.5">حفظ</button>
+              <button (click)="toggleModal()" type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 mr-5">إلغاء</button>
+
+          </form>
+      </div>
+  </div>
+</div> 
+
+  <div *ngIf="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
+  
+</div>

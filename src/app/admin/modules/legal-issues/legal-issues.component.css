@@ -1,0 +1,45 @@
+.bg-colored-brown{
+  background-color: var(--light-color);
+}
+.text-colored-darkbrown, .fa-pencil, .fa-ellipsis-v{
+  color: var(--main-color);
+}
+.btn-bg{
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* Pagination. */
+.pagination {
+	padding: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+#numbers {
+	padding: 0;
+	margin: 0 2rem;
+	list-style-type: none;
+	display: flex;
+}
+
+#numbers li a {
+	color: #fff;
+	padding: .5rem 1rem;
+	text-decoration: none;
+	opacity: .7;
+  margin: 8px;
+}
+
+#numbers li a:hover {
+	opacity: 1;
+  background-color: var(--main-color);
+}
+
+#numbers li a.active {
+	opacity: 1;
+  background-color: var(--main-color);
+	color: #333;
+}

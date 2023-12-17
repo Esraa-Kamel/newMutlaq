@@ -1,0 +1,917 @@
+<div class="container mx-auto px-4 sm:px-8">
+  <nav class="flex" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+      <li class="inline-flex items-center">
+        <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+          <i class="fa-regular fa-file mt-1 mx-2"></i>
+          القضايا القانونية
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <div class="py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 my-2">
+      <div>
+        <button (click)="toggleModal()" type="button" class="btn-bg border border-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm px-5 py-2.5">إنشاء قضية جديدة <i class="fa fa-plus mr-2"></i></button>
+      </div>
+      <div class="grid lg:grid-cols-4 md:grid-cols-12 sm:grid-cols-12">
+        <label for="" class="py-2.5 lg:justify-self-center">بحث</label>
+        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  py-2.5 px-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 col-span-3" placeholder="بحث بالبريد الإلكتروني" required>
+      </div>
+      <div></div>
+      <div class="grid grid-cols-3">
+        <label for="" class="py-2.5">نوع القضية</label>
+        <select id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="">الكل</option>
+        </select>
+      </div>
+      <div class="grid grid-cols-3">
+        <label for="" class="py-2.5">حالة القضية</label>
+        <select id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="">الكل</option>
+        </select>
+      </div>
+    </div>
+    <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+      <div
+        class="inline-block min-w-full shadow-md rounded-lg overflow-hidden"
+      >
+        <table id="my-table" class="min-w-full leading-normal">
+          <thead>
+            <tr>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+              <input type="checkbox">
+              </th>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+              بيانات العميل
+              </th>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+                أسم القضية
+              </th>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+              وصف القضية
+              </th>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+              نوع القضية
+              </th>
+              <th
+              class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+              >
+              حالة القضية
+            </th>
+            <th
+              class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 tracking-wider"
+            >
+            تاريخ البدء
+            </th>
+            <th
+            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider"
+          >
+              Action
+            </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <input type="checkbox">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-3">
+                    <p class="text-gray-900 font-bold whitespace-no-wrap">
+                      محمد القحطاني
+                    </p>
+                    <p class="text-gray-400 whitespace-no-wrap">MuhamedElkhahtany@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    سلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">
+                    إمساك بسلاح أبيض
+                  </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-colored-darkbrown leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-colored-brown opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">قضية جنائية</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">مستمرة</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 28, 2019</p>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+              
+              <i class="fa fa-pencil fa-lg ml-5" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v fa-lg" aria-hidden="true"></i>
+              </td>
+            </tr>
+           
+            <!-- <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1540845511934-7721dd7adec3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-gray-900 whitespace-no-wrap">
+                      Devin Childs
+                    </p>
+                    <p class="text-gray-600 whitespace-no-wrap">000002</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">$20,000</p>
+                <p class="text-gray-600 whitespace-no-wrap">USD</p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 14, 2019</p>
+                <p class="text-gray-600 whitespace-no-wrap">Due in 2 weeks</p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-orange-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">Pending</span>
+                </span>
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
+              >
+                <button
+                  type="button"
+                  class="inline-block text-gray-500 hover:text-gray-700"
+                >
+                  <svg
+                    class="inline-block h-6 w-6 fill-current"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 bg-white text-sm">
+                <div class="flex">
+                  <div class="flex-shrink-0 w-10 h-10">
+                    <img
+                      class="w-full h-full rounded-full"
+                      src="https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&h=160&w=160&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-gray-900 whitespace-no-wrap">
+                      Frederick Nicholas
+                    </p>
+                    <p class="text-gray-600 whitespace-no-wrap">000001</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">$12,000</p>
+                <p class="text-gray-600 whitespace-no-wrap">USD</p>
+              </td>
+              <td class="px-5 py-5 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">Sept 6, 2019</p>
+                <p class="text-gray-600 whitespace-no-wrap">
+                  Due 3 weeks ago
+                </p>
+              </td>
+              <td class="px-5 py-5 bg-white text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-red-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">Overdue</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 bg-white text-sm text-right">
+                <button
+                  type="button"
+                  class="inline-block text-gray-500 hover:text-gray-700"
+                >
+                  <svg
+                    class="inline-block h-6 w-6 fill-current"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+        
+        <div class="pagination">
+          <ol id="numbers"></ol>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Main modal -->
+<div *ngIf="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+  <div class="relative p-4 w-50 h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  إضافة قضية جديدة
+              </h3>
+              <button type="button" (click)="toggleModal()" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                  </svg>
+
+                 
+              </button>
+          </div>
+          <!-- Modal body -->
+          <form class="p-4 md:p-5">
+              <div class="grid gap-4 mb-4 grid-cols-2">
+                  <div class="col-span-2">
+                      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">البريد الإلكتروني</label>
+                      <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="إيميل صاحب القضية" required="">
+                  </div>
+                  <div class="col-span-2">
+                      <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">إختر أسم القضية</label>
+                      <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                          <option selected="">Select category</option>
+                          <option value="TV">TV/Monitors</option>
+                          <option value="PC">PC</option>
+                          <option value="GA">Gaming/Console</option>
+                          <option value="PH">Phones</option>
+                      </select>
+                  </div>
+                  <div class="col-span-2 sm:col-span-1">
+                      <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">أتعاب القضية الكلية</label>
+                      <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="المبلغ الكلي" required="">
+                  </div>
+                  <div class="col-span-2 sm:col-span-1">
+                      <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">مقدم الأتعاب</label>
+                      <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="المبلغ" required="">
+                  </div>
+                  <div class="col-span-2">
+                      <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">وصف القضية</label>
+                      <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write product description here"></textarea>                    
+                  </div>
+                  <div class="col-span-2">
+                      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="multiple_files">طلبات</label>
+                      <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" multiple>                   
+                  </div>
+              </div>
+              <button (click)="toggleModal()" type="button" class="btn-bg border border-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm px-5 py-2.5">حفظ</button>
+              <button (click)="toggleModal()" type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 mr-5">إلغاء</button>
+
+          </form>
+      </div>
+  </div>
+</div> 
+
+  <div *ngIf="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
+  
+</div>
