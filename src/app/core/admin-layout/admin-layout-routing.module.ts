@@ -1,3 +1,4 @@
+import { OrdersModule } from './../../admin/modules/orders/orders.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -31,6 +32,11 @@ const routes: Routes = [
     path: 'workDays',
     loadChildren: () =>
       import('./../../admin/modules/work-days/work-days.module').then(m => m.WorkDaysModule)
+  },
+  {
+    path: 'orders',
+    loadChildren: () =>
+      import('./../../admin/modules/orders/orders.module').then(m => m.OrdersModule)
   },
 ];
 
