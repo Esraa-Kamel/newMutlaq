@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{html,ts}"
   ],
     theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brown: {
+          500: '#3D2318', // Define your desired shade of brown
+        },
+      },
+    },
   },
   plugins: [],
 }
