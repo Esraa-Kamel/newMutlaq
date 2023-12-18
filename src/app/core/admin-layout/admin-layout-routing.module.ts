@@ -1,3 +1,4 @@
+import { OrdersModule } from './../../admin/modules/orders/orders.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -26,6 +27,11 @@ const routes: Routes = [
     path: 'issuesName',
     loadChildren: () =>
       import('./../../admin/modules/issues-name/issues-name.module').then(m => m.IssuesNameModule)
+  },
+  {
+    path: 'orders',
+    loadChildren: () =>
+      import('./../../admin/modules/orders/orders.module').then(m => m.OrdersModule)
   },
 ];
 
