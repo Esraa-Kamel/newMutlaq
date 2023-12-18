@@ -1,4 +1,3 @@
-import { OrdersModule } from './../../admin/modules/orders/orders.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
